@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ravi Panchal</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="style.css"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+		<div class="container-fluid">
+		   <!--List of Jukebox Songs HTML -->
+			<div class="row box">
+			<img src="images/logojukebox.png" style="width:350px; height: 150px;">
+			<h4>Albumlist</h4>
+				<div class="box1">
+					<button class="songs" id="beatles">
+				  		<img class="songimg" src="images/beatles1.jpg" >
+				  	</button>
+				</div>
+				<div class="box1">
+					<button class="songs"  id="ladygaga">
+				  		<img class="songimg" src="images/ladygaga.jpg" >
+				  	</button>
+				</div>
+				<div class="box1">
+					<button class="songs"  id="adele">
+				  		<img class="songimg" src="images/adele.jpg" >
+				  	</button>
+				</div>
+				<div class="box1">
+					<button class="songs"  id="bobdylan">
+				  		<img class="songimg" src="images/bobdylan.jpg" >
+				  	</button>
+				</div>
+				<div class="box1">
+					<button class="songs"  id="jayz">
+				  		<img  class="songimg" src="images/jayz.jpg" >
+				  	</button>
+				</div>
+				<div class="box1">
+					<button class="songs"  id="abba">
+				  		<img  class="songimg" src="images/abba.jpg" style="width: 75px ; height: 75px">
+				  	</button>
+				</div>
+			</div>	
+
+			<!--Play /Pause / Stop /Next Disc HTMl -->
+			<div class="row box">
+			    
+
+				<div class="row disc">
+ 					<h4>Now Playing</h4>
+ 					<!--<img src="images/onair.png" style="width: 275px ; height: 175px"> -->
+				    <div class="songinfo">
+				        <div class="inforow">
+					        <label>Title : </label> 
+					   		<h5 id="songtitle"></h5>
+					   	</div>	
+					   	<div class="inforow">
+					   		<label>Artist :</label>
+					   		<h5 id="artist"></h5>
+					   	</div>
+					   	<div class="inforow">	
+					   		<label>Year : </label>
+					   		<h5 id="year"></h5>
+					   	</div>
+					   	<div class="inforow">	
+					   		<label>Genre : </label>
+					   		<h5 id="genre"></h5>
+					   	</div>
+					   	<div class="inforow">	
+					   		<label>Fun Fact : </label>
+					   		<h5 id="funfact"></h5>
+					   	</div>	
+				   	</div>			   	
+				</div>	
+				
+				<div class="row disc">
+					<div class="songinfo">
+					  <p>adadasd </p>
+						<h4>Audio Control</h4>
+	     				<img src="images/vinyl.jpg"  id="vinyldisc" style="width: 450px ; height: 450px">
+					    <audio id="myAudio">  						
+						</audio>
+					</div>	
+				</div>
+				
+				<div class="row disc">
+					<h4>Play Controls</h4>
+					    <div class="songinfo">
+							<div class="playcontrolbox">
+								<div class="playcontrolrow">
+									<button id="stopbutton">
+								  		<img src="images/stopbutton3.png" style="width: 75px ; height: 75px">
+								  	</button>
+								</div>
+
+
+								<div class="playcontrolrow">
+								  	<button id="prevbutton">
+								  		<img src="images/prevbutton3.png" style="width: 75px ; height: 75px">
+								  	</button>
+								    
+								    <button id="playbutton" >
+								  		<img src="images/playbutton3.png" style="width: 75px ; height: 75px">
+								  	</button>
+								
+									<button id="nextbutton">
+								  		<img src="images/nextbutton3.png" style="width: 75px ; height: 75px">
+								  	</button>
+								</div>
+
+								<div class="playcontrolrow">
+									<button id="pausebutton">
+								  		<img src="images/pausebutton3.png" style="width: 75px ; height: 75px">
+								  	</button>
+								</div>
+							</div>	
+						</div>	
+
+				</div>	
+			</div>	
+
+			<!--Songs Queue HTML -->
+			<div class="row box" >
+				<div class="row box1">
+				    <h4>Song Queue</h4>
+				    <div id="jukeboxqueue">
+				
+					</div>
+				</div>
+			</div>	
+		</div>
+	</body>
+</html>
