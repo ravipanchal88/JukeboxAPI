@@ -1,32 +1,33 @@
-body{
+body {
 	background-image: url("images/jukeboxbackground1.png")
 }
 
-h4{
-	color:white;
+h4 { 
+	color: white;
 	font-size: xx-small;
-	margin:1px 1px;
+	margin: 1px 1px;
 }
 
-h5,label{
-	color:indianred;
+label {
+	color: indianred;
 	font-size: small;
-	margin:1px 1px;
-}
-
-button{
-
+	margin: 1px 1px;
 }
 
 
+h5 {
+	color: lightgrey;
+	font-size: small;
+	margin: 1px 1px;
+}
 
 .box {
 	display: flex;
 	flex-direction: row;
-	justify-content:space-around;
+	justify-content: space-around;
 	/*align-items: center;*/
 	margin: 5px 5px 5px 5px;
-	border:1px solid indianred;*/
+	/*border:1px solid indianred;*/
 	height: auto;
 
 }
@@ -47,7 +48,7 @@ button{
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	border:solid .5px lightgrey;
+	border: solid .5px lightgrey;
 	/*margin: 10px 10px;*/
 	border-radius: 100px;
 	border-style: inset;
@@ -75,11 +76,9 @@ button{
 	align-items: center;
 	align-content: center;
 	margin: 10px 10px;
-	border:1px solid indianred;
-	max-width:30%;
+	/*border:1px solid indianred;*/
+	max-width: 30%;
 	min-width: 30%;
-
-	
 }
 
 
@@ -91,50 +90,49 @@ button{
 }
 
 
-.songinfo{
+.songinfo {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
 	align-content: flex-start;
 	margin: 2px 2px;
-	padding:2px 2px;
+	padding: 2px 2px;
 	
 	min-width: 30%;
-	border:1px solid indianred;*/
+	/*border:1px solid indianred;*/
 }
 
-.songimg{
+.songimg {
 	 width: 75px;
     height: 75px;
 
 }
 
-button{
+button {
 	background-color: Transparent;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     border: none;
-    cursor:pointer;
+    cursor: pointer;
     overflow: hidden;
-    outline:none;
+    outline: none;
     width: 75px;
     height: 75px;
 }
 
-
-.imgqueue{
+.imgqueue {
 	width: 75px;
 	height: 75px;
 }
 
-.inforow{
+.inforow {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: flex-start;
 	align-content: flex-start;
 	margin: 2px 2px;
-	padding:2px 2px;
+	padding: 2px 2px;
 	width: 100%;
 
 }

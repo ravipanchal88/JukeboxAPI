@@ -17,75 +17,51 @@ $(document).ready(function(){
 
   //Audio play functionailty
   function playAudio() { 
-  //  console.log(playpointer);
-  //  console.log(queuepointer);
     var currentsongsrc = songsqueue[playpointer].src;
-  //  console.log(currentsongsrc);
     var currentsongtype = songsqueue[playpointer].type;
-  //  console.log(songsqueue[playpointer].title);
     $("#artist").html(songsqueue[playpointer].artist);
     $("#songtitle").html(songsqueue[playpointer].title);
     $("#genre").html("Rock");
     $("#year").html("1980");
-    $("#funfact").html("Beatles were the greatest Rock band the world ever saw. The totalsales of beatles records to date is 10 billions dollars");
+    $("#funfact").html(songsqueue[playpointer].funfact);
     $('#myAudio').attr('src',currentsongsrc);    
     $('#myAudio')[0].play();
   } 
 
-
-    
   var aud = document.getElementById("myAudio");
   aud.onended = function() {
-    //alert("The audio has ended finally");
         playpointer++;
         console.log(playpointer);
         console.log(queuepointer);
         alert(" I am playing next song");
         if(playpointer <  queuepointer) {
-         // console.log("ravi");
-         playAudio();
-          buildImages();
+        playAudio();
+        buildImages();
         }
   };
     
 
  // Songs Kist//
   $("#beatles").click( function(){
-       var beatles = new Jukebox("Beatles","John lennon","beatles1.jpg","keromama.mp3","mpeg");
-       songsqueue[queuepointer] = Object.assign({},beatles);
-       queuepointer++;
-       var x = "images/"+(songsqueue[playpointer].albumcover);
-       // console.log(x);
-      // $("queueimg1").attr("src") = x;
-       $(".queueclass").attr('src', x);
-      // console.log(songsqueue);
-      // console.log(songsqueue.length);
-      // console.log(queuepointer);
-      // console.log(songsqueue[playpointer].albumcover);
+      var beatles = new Jukebox("Beatles","John lennon","beatles1.jpg","keromama.mp3","mpeg","Beatles were the greatest Rock band the world ever saw. The totalsales of beatles records to date is 10 billions dollars");
+      songsqueue[queuepointer] = Object.assign({},beatles);
+      queuepointer++;
+      var x = "images/"+(songsqueue[playpointer].albumcover);
+      $(".queueclass").attr('src', x);
       buildImages();
   });
 
   $("#ladygaga").click( function(){
-       var ladygaga = new Jukebox("Alejandro","ladygaga","ladygaga.jpg","song1.mp3","audio/mpeg");
-       songsqueue[queuepointer] = Object.assign({},ladygaga);
-       queuepointer++;
-      // console.log(songsqueue);
-      // console.log(songsqueue.length);
-      // console.log(queuepointer);
-      //  var x = "images/"+(songsqueue[queuepointer-1].albumcover);
-      //  console.log(x);
-      // $("queueimg1").attr("src") = x;
-      // $(".queueclass").attr('src', x);
+      var ladygaga = new Jukebox("Alejandro","ladygaga","ladygaga.jpg","song1.mp3","mpeg","Her main nicknames are Gagaloo, Loopy, Mother Monster, Rabbit Teeth and Little Mermaid");
+      songsqueue[queuepointer] = Object.assign({},ladygaga);
+      queuepointer++;
       buildImages();
   });
 
     $("#jayz").click( function(){
-       var jayz = new Jukebox("Alejandro","ladygaga","jayz.jpg","song3.mp3","audio/mpeg");
+       var jayz = new Jukebox("Alejandro","ladygaga","jayz.jpg","song3.mp3","mpeg","Jay-Z sold crack and used a rubber band as a money clip: The little dudes who were working with me had to earn their rubber bands… make a certain quota for the week to get the rubber band. If they did something that wasn’t thorough, like lost work or put someone on the team at risk, they got their rubber band popped.");
        songsqueue[queuepointer] = Object.assign({},jayz);
        queuepointer++;
-      // console.log(songsqueue);
-      // console.log(songsqueue.length);
-      // console.log(queuepointer);
       buildImages();
   });
 
@@ -117,14 +93,11 @@ $(document).ready(function(){
 
 
   $("#prevbutton").click(function(){
-      // playAudio();
        playpointer--;
        playAudio();
     });
 
 //song queue display
-
-
 function buildImages() {
    var j = 0;
       $('#jukeboxqueue').append ( 
