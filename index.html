@@ -18,32 +18,33 @@
 			<img src="images/logojukebox.png" style="width:350px; height: 150px;">
 			<h4>Albumlist</h4>
 				<div class="box1">
-					<button class="songs" id="beatles" data:>
+					<button class="songs" id="beatles" data-title="We Can Work It Out" data-artist="Beatles" data-src="wecanworkitout.mp3" data-type="mpeg" data-albumcover="beatles1.jpg" data-funfact="The Beatles officially broke up at Disney World.">
 				  		<img class="songimg" src="images/beatles1.jpg" >
 				  	</button>
 				</div>
+				
 				<div class="box1">
-					<button class="songs"  id="ladygaga">
+					<button class="songs"  id="ladygaga" data-title="Alejandro" data-artist="Ladygaga" data-src="alejandro.mp3" data-type="mpeg" data-albumcover="ladygaga.jpg" data-funfact="Lady Gaga’s favourite cartoon character is Bugs Bunny.">
 				  		<img class="songimg" src="images/ladygaga.jpg" >
 				  	</button>
 				</div>
 				<div class="box1">
-					<button class="songs"  id="adele">
-				  		<img class="songimg" src="images/adele.jpg" >
+					<button class="songs"  id="edsheeran" data-title="Shape Of You" data-artist="Ed Sheeran" data-src="shapeofyou.mp3" data-type="mpeg" data-albumcover="edsheeran.jpg" data-funfact="All four of Ed's guitars have names...they are Lloyd, Felix, Cyril, and Nigel">
+				  		<img class="songimg" src="images/edsheeran.jpg" >
 				  	</button>
 				</div>
 				<div class="box1">
-					<button class="songs"  id="bobdylan">
-				  		<img class="songimg" src="images/bobdylan.jpg" >
+					<button class="songs"  id="neilyoung" data-title="Help" data-artist="Neil Young" data-src="philadelphia.mp3" data-type="mpeg" data-albumcover="neilyoung.jpg" data-funfact="When given the news that his beloved custom rig had caught fire and burnt out, he had its remains transported back to Broken Arrow Ranch and buried in a eucalyptus grove.">
+				  		<img class="songimg" src="images/neilyoung.jpg" >
 				  	</button>
 				</div>
 				<div class="box1">
-					<button class="songs"  id="jayz">
+					<button class="songs"  id="jayz" data-title="Empire State Of Mind" data-artist="Jayz" data-src="empirestateofmind.mp3" data-type="mpeg" data-albumcover="jayz.jpg" data-funfact="Jay-Z’s mom said he used to keep his siblings up by banging out rhythms on everything, so she eventually got her son a boom box which inspired him to start writing lyrics">
 				  		<img  class="songimg" src="images/jayz.jpg" >
 				  	</button>
 				</div>
 				<div class="box1">
-					<button class="songs"  id="abba">
+					<button class="songs"  id="abba" data-title="Money" data-artist="ABBA" data-src="money.mp3" data-type="mpeg" data-albumcover="abba.jpg" data-funfact="Before they were “ABBA” (the initials of their first names), the band was known as “Festfolk,” meaning “party people” in Swedish. ">
 				  		<img  class="songimg" src="images/abba.jpg" style="width: 75px ; height: 75px">
 				  	</button>
 				</div>
@@ -51,8 +52,6 @@
 
 			<!--Play /Pause / Stop /Next Disc HTMl -->
 			<div class="row box">
-			    
-
 				<div class="row disc">
  					<h4>Now Playing</h4>
  					<!--<img src="images/onair.png" style="width: 275px ; height: 175px"> -->
@@ -80,49 +79,47 @@
 				   	</div>			   	
 				</div>	
 				
-				<div class="row disc">
-					<div class="songinfo">
-					  <p>adadasd </p>
-						<h4>Audio Control</h4>
-	     				<img src="images/vinyl.jpg"  id="vinyldisc" style="width: 450px ; height: 450px">
-					    <audio id="myAudio">  						
-						</audio>
-					</div>	
-				</div>
+			<div class="row disc">
+				<div class="songinfo">
+				  <p>adadasd </p>
+					<h4>Audio Control</h4>
+     				<img src="images/vinyl.jpg"  id="vinyldisc" style="width: 450px ; height: 450px">
+				    <audio id="myAudio">  						
+					</audio>
+				</div>	
+			</div>
 				
-				<div class="row disc">
-					<h4>Play Controls</h4>
-					    <div class="songinfo">
-							<div class="playcontrolbox">
-								<div class="playcontrolrow">
-									<button id="stopbutton">
-								  		<img src="images/stopbutton3.png" style="width: 75px ; height: 75px">
-								  	</button>
-								</div>
+			<div class="row disc">
+				<h4>Play Controls</h4>
+				    <div class="songinfo">
+						<div class="playcontrolbox">
+							<div class="playcontrolrow">
+								<button id="stopbutton">
+							  		<img src="images/stopbutton3.png" style="width: 75px ; height: 75px">
+							  	</button>
+							</div>
 
+							<div class="playcontrolrow">
+							  	<button id="prevbutton">
+							  		<img src="images/prevbutton3.png" style="width: 75px ; height: 75px">
+							  	</button>
+												    
+							    <button id="playbutton" >
+							  		<img src="images/playbutton3.png" style="width: 75px ; height: 75px">
+							  	</button>
+												
+								<button id="nextbutton">
+							  		<img src="images/nextbutton3.png" style="width: 75px ; height: 75px">
+							  	</button>
+							</div>
 
-								<div class="playcontrolrow">
-								  	<button id="prevbutton">
-								  		<img src="images/prevbutton3.png" style="width: 75px ; height: 75px">
-								  	</button>
-								    
-								    <button id="playbutton" >
-								  		<img src="images/playbutton3.png" style="width: 75px ; height: 75px">
-								  	</button>
-								
-									<button id="nextbutton">
-								  		<img src="images/nextbutton3.png" style="width: 75px ; height: 75px">
-								  	</button>
-								</div>
-
-								<div class="playcontrolrow">
-									<button id="pausebutton">
+							<div class="playcontrolrow">
+								<button id="pausebutton">
 								  		<img src="images/pausebutton3.png" style="width: 75px ; height: 75px">
-								  	</button>
-								</div>
-							</div>	
+							  	</button>
+							</div>
 						</div>	
-
+					</div>	
 				</div>	
 			</div>	
 
@@ -131,6 +128,12 @@
 				<div class="row box1">
 				    <h4>Song Queue</h4>
 				    <div id="jukeboxqueue">
+				    <!--   <img class ="imgqueueclass" id="imgqueue1" src=" " style="width: 75px ; height: 75px; border:.2px solid white"> 
+				       <img class ="imgqueueclass" id="imgqueue2" src=" " style="width: 75px ; height: 75px; border:.2px solid white">  
+				       <img class ="imgqueueclass" id="imgqueue3" src=" " style="width: 75px ; height: 75px; border:.2px solid white"> 
+				       <img class ="imgqueueclass" id="imgqueue4" src=" " style="width: 75px ; height: 75px; border:.2px solid white">  
+				       <img class ="imgqueueclass" id="imgqueue5" src=" " style="width: 75px ; height: 75px; border:.2px solid white"> 
+				       <img class ="imgqueueclass" id="imgqueue6" src=" " style="width: 75px ; height: 75px; border:.2px solid white">  -->
 				
 					</div>
 				</div>
