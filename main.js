@@ -2,7 +2,8 @@ $(document).ready(function(){
 
   var songsqueue = []; // Intitializing empty songs queue;
   var queuepointer= 0; // Pointer to track the songs in a queue; 
-  var playpointer=0;   // Pointer to track the current song in queue; 
+  var playpointer= 0;   // Pointer to track the current song in queue; 
+  var ispaused = 0;
 
   //Constructor for Jukebox
   function Jukebox(title,artist,albumcover,src,type,funfact) {
@@ -41,21 +42,30 @@ $(document).ready(function(){
     var song = new Jukebox(x.dataset.title,x.dataset.artist,x.dataset.albumcover,x.dataset.src,x.dataset.type,x.dataset.funfact);
     songsqueue[queuepointer] = Object.assign({},song);
     queuepointer++;
-    renderQueue()
+    renderQueue();
   });
 
+
 //Audio Controls
+  //Play Control 
   $("#playbutton").click(function(){
     playAudio();
   });
-
+  
+  //Pause control
   $("#pausebutton").click(function(){
-    $('#myAudio')[0].pause();
+     if(ispaused == 1){
+        document.getElementById("myAudio").play();
+        ispaused = 0 ; 
+     } else {
+      $('#myAudio')[0].pause();
+      ispaused = 1;
+     }
   });
 
+  //stop Control
   $("#stopbutton").click(function(){
-    $('#myAudio')[0].stop();
-    $('#myAudio')[0].currentTime = 0;
+    $('#myAudio').attr('src',"");   
   });
 
   $("#nextbutton").click(function(){
@@ -64,9 +74,9 @@ $(document).ready(function(){
     alert("You have reached last song in queue");
     } else {
     playAudio();
+    renderQueue();
     }
   });
-
 
   $("#prevbutton").click(function(){
     playpointer--;
@@ -74,17 +84,28 @@ $(document).ready(function(){
       alert("You have reached 1st song in queue");
     } else { 
     playAudio();
+    renderQueue();
     }
   });
 
 //song queue display
   function renderQueue() {
-    var j = 0;
-    j = document.createElement('img'),
-    j.src =  "images/"+(songsqueue[queuepointer-1].albumcover)
-    j.style =  "width:75px;height:75px;"
-    $('#jukeboxqueue').append(j);
-  };
+      if(songsqueue.length){
+        var element = document.getElementById("jukeboxqueue");//Get the Parent Node
+        element.innerHTML = ""; //Remove the child element
+        console.log(element);
+        //starting a loop to add childs
+        for(var j = playpointer; j < songsqueue.length; j++){
+          var newimg = document.createElement('img');
+          newimg.src =  "images/"+ songsqueue[j].albumcover;
+          newimg.style =  "width:75px;height:75px;"
+          $('#jukeboxqueue').append(newimg);
+        }
+        
+      } else {
+        console.log("no Child to remove");
+      } 
+    }; 
     
 });
 
