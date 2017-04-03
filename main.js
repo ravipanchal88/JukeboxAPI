@@ -25,6 +25,9 @@ $(document).ready(function(){
     $("#funfact").html(songsqueue[playpointer].funfact);
     $('#myAudio').attr('src',currentsongsrc);    
     $('#myAudio')[0].play();
+    document.getElementById('vinyldisc').className = "vinyldiscplaying";
+   //var xx = $("vinyldisc").attr('className');
+   // console.log(xx);
   } 
 
   var aud = document.getElementById("myAudio");
