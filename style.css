@@ -1,5 +1,6 @@
 body {
-	/*background-image: url("images/jukeboxbackground1.png")*/
+	background-image: url("images/jukeboxbackground.png");
+	background-image: no-repeat;
 }
 
 h4 { 
@@ -10,14 +11,14 @@ h4 {
 
 label {
 	color: indianred;
-	font-size: small;
+	font-size: large;
 	margin: 1px 1px;
 }
 
 
 h5 {
 	color: lightgrey;
-	font-size: small;
+	font-size: large;
 	margin: 1px 1px;
 }
 
@@ -88,6 +89,8 @@ h5 {
     animation-duration: .5s;
     animation-iteration-count: infinite;
 }
+
+
 
 
 @keyframes dischighlight {

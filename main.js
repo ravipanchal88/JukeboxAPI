@@ -63,12 +63,14 @@ $(document).ready(function(){
      } else {
       $('#myAudio')[0].pause();
       ispaused = 1;
+      document.getElementById('vinyldisc').className = "vinyldiscstatic";
      }
   });
 
   //stop Control
   $("#stopbutton").click(function(){
-    $('#myAudio').attr('src',"");   
+    $('#myAudio').attr('src',"");  
+    document.getElementById('vinyldisc').className = "vinyldiscstatic"; 
   });
 
   $("#nextbutton").click(function(){
