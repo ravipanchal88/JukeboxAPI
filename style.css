@@ -1,5 +1,5 @@
 body {
-	background-image: url("images/jukeboxbackground1.png")
+	/*background-image: url("images/jukeboxbackground1.png")*/
 }
 
 h4 { 
@@ -92,9 +92,9 @@ h5 {
 
 @keyframes dischighlight {
     0%   {background-color:red; left:0px; top:0px; border-radius: 250px;transform: rotate(72deg);}
-    25%  {background-color:yellow; left:200px; top:0px;border-radius: 250px; transform: rotate(148deg); }
-    50%  {background-color:blue; left:200px; top:200px; border-radius: 250px; transform: rotate(210deg);}
-    75%  {background-color:green; left:0px; top:200px; border-radius: 250px;transform: rotate(282deg); }
+    25%  {background-color:yellow; left:200px; top:0px;border-radius: 250px; transform: rotate(144deg); }
+    50%  {background-color:blue; left:200px; top:200px; border-radius: 250px; transform: rotate(216deg);}
+    75%  {background-color:green; left:0px; top:200px; border-radius: 250px;transform: rotate(288deg); }
     100% {background-color:red; left:0px; top:0px; border-radius: 250px; transform: rotate(360deg);}
      -ms-transform: rotate(20deg); /* IE 9 */
     -webkit-transform: rotate(20deg); /* Safari */
