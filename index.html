@@ -4,133 +4,96 @@
 		<title>Ravi Panchal</title>
 		<meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-		<link rel="stylesheet" href="style.css"> 
+	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script type="text/javascript" src="main.js"></script>
+  		<script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		
+  		
+  		<script>
+   
+  		</script>
+
+
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+		<link rel="stylesheet" href="style.css"> 
+
+	
 	</head>
 	<body>
 		<div class="container-fluid">
-		   <!--List of Jukebox Songs HTML -->
-			<div class="row box">
-			<!--<img src="images/logojukebox.png" style="width:350px; height: 150px;"> -->
-			<h4>Albumlist</h4>
-				<div class="box1">
-					<button class="songs" id="beatles" data-title="We Can Work It Out" data-artist="Beatles" data-src="wecanworkitout.mp3" data-type="mpeg" data-albumcover="beatles1.jpg" data-funfact="The Beatles officially broke up at Disney World.">
-				  		<img class="songimg" src="images/beatles1.jpg" >
-				  	</button>
+		    <img src="images/logo.png" style="margin-top:15px;">
+			<div class="row">
+				<div class="col-lg-2 col-md-3 col-xs-12">
+					<div class="column1">
+						<button>Browse</button>
+						<button>Radio</button>
+						<h4>Your Music</h4>
+						<button>Songs</button>
+						<button>Artist</button>
+						<button>Albums</button>
+						<button>Local Files</button>
+						<button>Genres</button>
+					</div>
 				</div>
-				
-				<div class="box1">
-					<button class="songs"  id="ladygaga" data-title="Alejandro" data-artist="Ladygaga" data-src="alejandro.mp3" data-type="mpeg" data-albumcover="ladygaga.jpg" data-funfact="Lady Gaga’s favourite cartoon character is Bugs Bunny.">
-				  		<img class="songimg" src="images/ladygaga.jpg" >
-				  	</button>
-				</div>
-				<div class="box1">
-					<button class="songs"  id="edsheeran" data-title="Shape Of You" data-artist="Ed Sheeran" data-src="shapeofyou.mp3" data-type="mpeg" data-albumcover="edsheeran.jpg" data-funfact="All four of Ed's guitars have names...they are Lloyd, Felix, Cyril, and Nigel">
-				  		<img class="songimg" src="images/edsheeran.jpg" >
-				  	</button>
-				</div>
-				<div class="box1">
-					<button class="songs"  id="neilyoung" data-title="Help" data-artist="Neil Young" data-src="philadelphia.mp3" data-type="mpeg" data-albumcover="neilyoung.jpg" data-funfact="When given the news that his beloved custom rig had caught fire and burnt out, he had its remains transported back to Broken Arrow Ranch and buried in a eucalyptus grove.">
-				  		<img class="songimg" src="images/neilyoung.jpg" >
-				  	</button>
-				</div>
-				<div class="box1">
-					<button class="songs"  id="jayz" data-title="Empire State Of Mind" data-artist="Jayz" data-src="empirestateofmind.mp3" data-type="mpeg" data-albumcover="jayz.jpg" data-funfact="Jay-Z’s mom said he used to keep his siblings up by banging out rhythms on everything, so she eventually got her son a boom box which inspired him to start writing lyrics">
-				  		<img  class="songimg" src="images/jayz.jpg" >
-				  	</button>
-				</div>
-				<div class="box1">
-					<button class="songs"  id="abba" data-title="Money" data-artist="ABBA" data-src="money.mp3" data-type="mpeg" data-albumcover="abba.jpg" data-funfact="Before they were “ABBA” (the initials of their first names), the band was known as “Festfolk,” meaning “party people” in Swedish. ">
-				  		<img  class="songimg" src="images/abba.jpg" style="width: 75px ; height: 75px">
-				  	</button>
-				</div>
-			</div>	
+				<div class="col-lg-8 col-md-3 col-xs-12">
+					<div id ="displaylistparent" class="column2">
+						<div>
+							<input type="text" name="search" id="searchtext">
+						    <button id="btn_search">
+						    	<i class="fa fa-search" aria-hidden="true"></i>
+						    </button>
+						</div>
 
-			<!--Play /Pause / Stop /Next Disc HTMl -->
-			<div class="row box">
-				<div class="row disc">
- 					<h4>Now Playing</h4>
- 					<!--<img src="images/onair.png" style="width: 275px ; height: 175px"> -->
-				    <div class="songinfo">
-				        <div class="inforow">
-					        <label>Title : </label> 
-					   		<h5 id="songtitle"></h5>
-					   	</div>	
-					   	<div class="inforow">
-					   		<label>Artist :</label>
-					   		<h5 id="artist"></h5>
-					   	</div>
-					   	<div class="inforow">	
-					   		<label>Year : </label>
-					   		<h5 id="year"></h5>
-					   	</div>
-					   	<div class="inforow">	
-					   		<label>Genre : </label>
-					   		<h5 id="genre"></h5>
-					   	</div>
-					   	<div class="inforow">	
-					   		<label>Fun Fact : </label>
-					   		<h5 id="funfact"></h5>
-					   	</div>	
-				   	</div>			   	
-				</div>	
-				
-			<div class="row disc">
-				<div class="songinfo">
-					<h4>Audio Control</h4>
-     				<img src="images/vinyl.jpg" class="vinyldiscstatic" id="vinyldisc" style="width: 450px ; height: 450px">
-				    <audio id="myAudio">  						
-					</audio>
-				</div>	
-			</div>
-				
-			<div class="row disc">
-				<h4>Play Controls</h4>
-				    <div class="songinfo">
-						<div class="playcontrolbox">
-							<div class="playcontrolrow">
-								<button id="stopbutton">
-							  		<img src="images/stopbutton3.png" style="width: 75px ; height: 75px">
-							  	</button>
-							</div>
+						<div>
+							<h2>Songs</h2>
+						</div>
+						<div class="displaymainbox ">
+							<div id="displaylist" class="listdisplay">
 
-							<div class="playcontrolrow">
-							  	<button id="prevbutton">
-							  		<img src="images/prevbutton3.png" style="width: 75px ; height: 75px">
-							  	</button>
-												    
-							    <button id="playbutton" >
-							  		<img src="images/playbutton3.png" style="width: 75px ; height: 75px">
-							  	</button>
-												
-								<button id="nextbutton">
-							  		<img src="images/nextbutton3.png" style="width: 75px ; height: 75px">
-							  	</button>
-							</div>
-
-							<div class="playcontrolrow">
-								<button id="pausebutton">
-								  		<img src="images/pausebutton3.png" style="width: 75px ; height: 75px">
-							  	</button>
 							</div>
 						</div>	
 					</div>	
-				</div>	
-			</div>	
+				</div>
+		
+				<div class="col-lg-2 col-md-3 col-xs-12">
+					<div class="column3">
+						<h4> Play Queue</h4>
+					</div>
+					<div id="queuelist">
 
-			<!--Songs Queue HTML -->
-			<div class="row box" >
-				<div class="row box1">
-				    <h4>Song Queue</h4>
-				    <div id="jukeboxqueue">
-				    
+					</div>
+				</div>
+			</div>	   
+
+			<!--Div Row for Player -->
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-xs-12">
+					<div class="column1row2">
+						<img id="currentplaying" src="images/adele.jpg" style="width: 75px; height:75px">
+						<label>Rolling Deep</label>
+					</div>
+				</div>
+					
+				<div class="col-lg-6 col-md-3 col-xs-12">
+					<div class="column2row2">
+					   <button id="prevbutton"><img src="images/prevbutton44.png" style="width: 75px; height:75px"> </button>
+					   <button id="playbutton"><img src="images/playbutton4.png" style="width: 75px; height:75px"> </button>
+					   <button id="stopbutton"><img src="images/stopbutton4.png" style="width: 75px; height:75px"> </button>
+					   <button id="nextbutton"><img src="images/prevbutton4.png" style="width: 75px; height:75px"> </button>
+					</div>
+				</div>
+				
+				<div class="col-lg-3 col-md-3 col-xs-12">
+					<div class="column3row2">
+ 						<div id="audiocontext">
+ 							<iframe></iframe>
+ 						</div>
 					</div>
 				</div>
 			</div>	
 		</div>
+		
+		<script type="text/javascript" src="main1.js"></script>
 	</body>
 </html>
