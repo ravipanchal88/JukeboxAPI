@@ -1,117 +1,109 @@
-body{
-	background-color: black;
+body {
+	background-color: grey;
 }
 
-h4	{
-color:white;
-font:large;
+h4 {
+color: white;
+font: large;
 align-self: center;
-margin-top:15px;
+margin-top: 15px;
 }
 
-
-
-.column1{
+.column1 {
 	background-color: #444444;
-	min-height: 650px;
+	height: 550px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	padding-top:55px;
+	padding-top: 55px;
 	justify-content: flex-start;
 	align-items: flex-start;
 	margin-top: 50px;
 	padding: 0px 0px; 
 }
 
-.column2{
+.column2 {
 	background-color: darkgrey;
-	min-height: 650px;
+	height: 550px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	padding-top:55px;
+	padding-top: 55px;
 	justify-content: flex-start;
 	align-items: flex-start;
 	margin-top: 50px;
 	padding: 0px 0px; 
 }
 
-.column3{
+.column3 {
 	background-color: #444444;
-	min-height: 650px;
+	height: 550px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	padding-top:55px;
+	padding-top: 55px;
 	justify-content: flex-start;
 	align-items: flex-start;
 	margin-top: 50px;
 	padding: 0px 0px; 
 }
 
-.column2row2{
-	background-color: #CCCCCC;
-	min-height: 150px;
-	
-}
-
-.column3row2,.column1row2{
+.column2row2 {
 	background-color: #CCCCCC;
 	min-height: 150px;
 }
 
-.column1row2,.column2row2{
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+.column3row2,.column1row2 {
+	background-color: #CCCCCC;
+	min-height: 150px;
 }
 
+.column1row2,.column2row2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
 
-button{
-	padding-left:15px;
+button {
+	padding-left: 15px;
 	background: transparent;
-	border:none;
+	border: none;
 	color: white;
 }
 
-
-.col-lg-1,.col-lg-10{
+.col-lg-1,.col-lg-10 {
 	padding: 0px;
 }
 
-input{
-	width:250px;
+input {
+	width: 250px;
 	height: 30px;
-	border-radius:35px;
-	border:none;
-	margin:15px;
+	border-radius: 35px;
+	border: none;
+	margin: 15px;
 }
 
 .listdisplay {
 	display: flex;
 	flex-direction: column;
-	padding-top:55px;
+	padding-top: 55px;
 	justify-content: flex-start;
 	align-items: flex-start;
 }
 
-
-.displaymainbox{
+.displaymainbox {
 	display: flex;
 	flex-direction: column;
-	padding-top:15px;
+	padding-top: 15px;
 	justify-content: flex-start;
 	align-items: flex-start;
-
 }
 
-
-.queuediv{
+.queuediv {
 	display: flex;
 	flex-direction: row;
-	padding-top:55px;
+	padding-top: 55px;
 	justify-content: flex-start;
 	align-items: center;
 }
