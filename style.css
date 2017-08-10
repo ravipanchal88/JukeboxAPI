@@ -1,17 +1,26 @@
 body {
-	background-color: grey;
+	/*background-color: white;*/
+	background-image: url("images/jukeboxbackground.png");
 }
 
-h4 {
+h4 ,h2{
 color: white;
 font: large;
 align-self: center;
 margin-top: 15px;
 }
 
+.headerlogo {
+	display: flex;
+	padding-top: 15px;
+	justify-content: center;
+	align-items: center;
+
+}
+
 .column1 {
-	background-color: #444444;
-	height: 550px;
+	background-color: white
+	height: 450px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -23,21 +32,21 @@ margin-top: 15px;
 }
 
 .column2 {
-	background-color: darkgrey;
-	height: 550px;
+	/*background-color: indianred;*/
+	height: 450px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	padding-top: 55px;
-	justify-content: flex-start;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
 	margin-top: 50px;
 	padding: 0px 0px; 
 }
 
 .column3 {
-	background-color: #444444;
-	height: 550px;
+/*	background-color: #444444;*/
+	height: 450px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -49,7 +58,7 @@ margin-top: 15px;
 }
 
 .column2row2 {
-	background-color: #CCCCCC;
+	/*background-color: #CCCCCC;*/
 	min-height: 150px;
 }
 

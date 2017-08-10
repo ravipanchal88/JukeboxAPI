@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ravi Panchal</title>
+		<title>RPS - JukeBox</title>
 		<meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -15,10 +15,15 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-		    <!--<img src="images/logo.png" style="margin-top:15px;"> -->
+		   
+		    <div class="row">
+		    	<div class="col-lg-12 col-md-12 col-xs-12 headerlogo">
+		    	 	<img src="images/jukebox.png"  style="margin-top:15px;"> 
+		    	</div> 	
+		    </div>
 			<div class="row">
 				<div class="col-lg-2 col-md-3 col-xs-12">
-					<div class="column1">
+			<!-- 		<div class="column1">
 						<button>Browse</button>
 						<button>Radio</button>
 						<h4>Your Music</h4>
@@ -27,7 +32,7 @@
 						<button>Albums</button>
 						<button>Local Files</button>
 						<button>Genres</button>
-					</div>
+					</div> -->
 				</div>
 				<div class="col-lg-8 col-md-3 col-xs-12">
 					<div id ="displaylistparent" class="column2">
@@ -61,31 +66,31 @@
 
 			<!--Div Row for Player -->
 			<div class="row">
-				<div class="col-lg-3 col-md-3 col-xs-12">
+				<!-- <div class="col-lg-3 col-md-3 col-xs-12">
 					<div class="column1row2" id="currentsong">
-					<!-- 	<img id="currentplaying" src="images/adele.jpg" style="width: 75px; height:75px">
-						<label>Rolling Deep</label> -->
+						<img id="currentplaying" src="images/adele.jpg" style="width: 75px; height:75px">
+						<label>Rolling Deep</label>
 					</div>
-				</div>
+				</div> -->
 					
-				<div class="col-lg-6 col-md-3 col-xs-12">
+				<div class="col-lg-12 col-md-12 col-xs-12">
 					<div class="column2row2">
-					   <button id="prevbutton"><img src="images/prevbutton44.png" style="width: 75px; height:75px"> </button>
-					   <button id="playbutton"><img src="images/playbutton4.png" style="width: 75px; height:75px"> </button>
-					   <button id="pausebutton"><img src="images/pausebutton4.png" style="width: 75px; height:75px"> </button>
+					   <button id="prevbutton"><img src="images/previous.png" style="width: 75px; height:75px"> </button>
+					   <button id="playbutton"><img src="images/playbutton.png" style="width: 75px; height:75px"> </button>
+					   <button id="pausebutton"><img src="images/pausebutton.png" style="width: 75px; height:75px"> </button>
 					  <!-- <button id="stopbutton"><img src="images/stopbutton4.png" style="width: 75px; height:75px"> </button> -->
-					   <button id="nextbutton"><img src="images/prevbutton4.png" style="width: 75px; height:75px"> </button>
+					   <button id="nextbutton"><img src="images/next.png" style="width: 75px; height:75px"> </button>
 					</div>
 				</div>
 				<script type="text/javascript" src="main.js"></script>
-				<div class="col-lg-3 col-md-3 col-xs-12">
+			<!-- 	<div class="col-lg-3 col-md-3 col-xs-12">
 					<div class="column3row2">
  						<div id="audiocontext">
- 							<!--<iframe id="scwid" style="width:275px; height:75px;"></iframe> -->
+ 							<iframe id="scwid" style="width:275px; height:75px;"></iframe> 
  							<!-- <iframe id="sc-widget" width="100%" height="166" scrolling="no" frameborder="no" src=""></iframe> -->
- 						</div>
+ 			<!-- 			</div>
 					</div>
-				</div>
+				</div> --> 
 			</div>	
 		</div>
 	</body>
